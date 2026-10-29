@@ -1,0 +1,23 @@
+[package]
+name = "schedule-checker"
+version = "0.4.10"
+description = "予定チェッカー（最前面ウィジェットとメイン画面）"
+edition = "2021"
+
+[lib]
+name = "schedule_checker_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.5", features = [] }
+
+[dependencies]
+# 2.12 以降: アプリ側でマイクの使用を許可できる（on_permission_request）
+tauri = { version = "2.12", features = ["tray-icon"] }
+serde_json = "1"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true

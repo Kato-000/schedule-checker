@@ -1,0 +1,25 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "ウィジェットとメイン画面で使う機能（画面の表示・前面固定・位置とサイズの変更・画面間の通知）",
+  "windows": [
+    "widget",
+    "main"
+  ],
+  "permissions": [
+    "core:default",
+    "core:window:allow-show",
+    "core:window:allow-hide",
+    "core:window:allow-set-focus",
+    "core:window:allow-unminimize",
+    "core:window:allow-set-always-on-top",
+    "core:window:allow-set-size",
+    "core:window:allow-set-min-size",
+    "core:window:allow-set-position",
+    "core:window:allow-start-dragging",
+    "core:event:allow-emit",
+    "core:event:allow-emit-to",
+    "core:event:allow-listen",
+    "core:event:allow-unlisten"
+  ]
+}

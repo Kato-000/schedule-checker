@@ -1,0 +1,360 @@
+{
+ "_説明": "初期手本。自分の承認データが同じ種類で3件たまるまで使われる。関係ないもの（車がなければ車検など）は消してOK。days_before=予定の何日前か、minutes_before_start=当日の開始何分前か、time=その日の時刻。",
+ "rules": [
+  "予定そのもの（振込する・提出する・参加する）はTodoにしない。その前の準備だけを書く",
+  "議事録・お礼・精算など、予定の後にやることは書かない",
+  "軽い確認は前日、時間のかかる作業や手配は早めにする。今日を期限にするのは急ぎのものだけ",
+  "飲み会や遊びなど気軽な私用は、Todoなしでよい",
+  "財布・スマホなど毎日持ち歩く物の確認は書かない"
+ ],
+ "examples": [
+  {
+   "id": "e01",
+   "text": "いとこの結婚式 12時受付",
+   "category": "行事",
+   "is_deadline": false,
+   "todos": [
+    {
+     "title": "ご祝儀用の新札を用意する",
+     "days_before": 7,
+     "priority": "high"
+    },
+    {
+     "title": "祝儀袋を買って名前と金額を書く",
+     "days_before": 3,
+     "priority": "high"
+    },
+    {
+     "title": "礼服・靴・小物を出して確認する",
+     "days_before": 3,
+     "priority": "medium"
+    },
+    {
+     "title": "会場までの経路と出発時刻を決める",
+     "days_before": 1,
+     "priority": "medium"
+    }
+   ]
+  },
+  {
+   "id": "e02",
+   "text": "会社の忘年会 19時から",
+   "category": "行事",
+   "is_deadline": false,
+   "todos": [
+    {
+     "title": "会費を用意する",
+     "days_before": 1,
+     "priority": "medium"
+    }
+   ]
+  },
+  {
+   "id": "e03",
+   "text": "取引先と打ち合わせ 14時",
+   "category": "会議",
+   "is_deadline": false,
+   "todos": [
+    {
+     "title": "議題と確認したい点をまとめる",
+     "days_before": 1,
+     "priority": "high"
+    },
+    {
+     "title": "必要な資料を用意して共有する",
+     "days_before": 1,
+     "priority": "medium"
+    }
+   ]
+  },
+  {
+   "id": "e04",
+   "text": "課長と面談",
+   "category": "会議",
+   "is_deadline": false,
+   "todos": [
+    {
+     "title": "話したいことをメモしておく",
+     "days_before": 1,
+     "priority": "medium"
+    },
+    {
+     "title": "前回の面談で決めたことの進み具合を確認する",
+     "days_before": 1,
+     "priority": "medium"
+    }
+   ]
+  },
+  {
+   "id": "e05",
+   "text": "転職の面接（Web）10時",
+   "category": "会議",
+   "is_deadline": false,
+   "todos": [
+    {
+     "title": "応募書類と企業の情報を読み返す",
+     "days_before": 3,
+     "priority": "high"
+    },
+    {
+     "title": "よく聞かれる質問への答えを準備する",
+     "days_before": 1,
+     "priority": "high"
+    },
+    {
+     "title": "カメラ・マイク・回線を確認する",
+     "days_before": 0,
+     "priority": "high",
+     "minutes_before_start": 30
+    }
+   ]
+  },
+  {
+   "id": "e06",
+   "text": "社内勉強会で発表 16時",
+   "category": "プレゼン",
+   "is_deadline": false,
+   "todos": [
+    {
+     "title": "発表資料の初稿を作る",
+     "days_before": 7,
+     "priority": "high"
+    },
+    {
+     "title": "時間を計って通し練習をする",
+     "days_before": 1,
+     "priority": "high"
+    },
+    {
+     "title": "投影用の機材と接続を確認する",
+     "days_before": 0,
+     "priority": "medium",
+     "minutes_before_start": 30
+    }
+   ]
+  },
+  {
+   "id": "e07",
+   "text": "金曜までに見積書を提出",
+   "category": "締切",
+   "is_deadline": true,
+   "todos": [
+    {
+     "title": "必要な数量と条件を集める",
+     "days_before": 3,
+     "priority": "high"
+    },
+    {
+     "title": "見積書を作成する",
+     "days_before": 1,
+     "priority": "high"
+    },
+    {
+     "title": "金額と宛先を見直す",
+     "days_before": 0,
+     "priority": "high"
+    }
+   ]
+  },
+  {
+   "id": "e08",
+   "text": "ゼミの課題レポート提出",
+   "category": "締切",
+   "is_deadline": true,
+   "todos": [
+    {
+     "title": "構成案を作る",
+     "days_before": 7,
+     "priority": "high"
+    },
+    {
+     "title": "初稿を書き上げる",
+     "days_before": 3,
+     "priority": "high"
+    },
+    {
+     "title": "見直して提出形式を整える",
+     "days_before": 1,
+     "priority": "medium"
+    }
+   ]
+  },
+  {
+   "id": "e09",
+   "text": "電気代の振込",
+   "category": "手続き",
+   "is_deadline": true,
+   "todos": [
+    {
+     "title": "請求額を確認する",
+     "days_before": 3,
+     "priority": "medium"
+    },
+    {
+     "title": "口座の残高を確認する",
+     "days_before": 3,
+     "priority": "high"
+    }
+   ]
+  },
+  {
+   "id": "e10",
+   "text": "運転免許の更新",
+   "category": "手続き",
+   "is_deadline": false,
+   "todos": [
+    {
+     "title": "更新のお知らせはがきと必要書類を用意する",
+     "days_before": 7,
+     "priority": "high"
+    },
+    {
+     "title": "受付時間と会場までの行き方を確認する",
+     "days_before": 1,
+     "priority": "medium"
+    }
+   ]
+  },
+  {
+   "id": "e11",
+   "text": "ふるさと納税の申し込み（年内）",
+   "category": "手続き",
+   "is_deadline": true,
+   "todos": [
+    {
+     "title": "今年の控除上限額の目安を調べる",
+     "days_before": 14,
+     "priority": "medium"
+    },
+    {
+     "title": "寄付先を決めて申し込む",
+     "days_before": 7,
+     "priority": "high"
+    }
+   ]
+  },
+  {
+   "id": "e12",
+   "text": "内科の定期受診 9時",
+   "category": "通院",
+   "is_deadline": false,
+   "todos": [
+    {
+     "title": "保険証・診察券・お薬手帳をまとめる",
+     "days_before": 1,
+     "priority": "high"
+    },
+    {
+     "title": "最近の体調や聞きたいことをメモする",
+     "days_before": 1,
+     "priority": "medium"
+    }
+   ]
+  },
+  {
+   "id": "e13",
+   "text": "人間ドック 午前",
+   "category": "通院",
+   "is_deadline": false,
+   "todos": [
+    {
+     "title": "送られてきた検査キットと問診票を確認する",
+     "days_before": 7,
+     "priority": "high"
+    },
+    {
+     "title": "問診票を記入する",
+     "days_before": 1,
+     "priority": "high"
+    },
+    {
+     "title": "指定時刻以降は食事をしない",
+     "days_before": 1,
+     "time": "21:00",
+     "priority": "high"
+    }
+   ]
+  },
+  {
+   "id": "e14",
+   "text": "簿記検定 9時集合",
+   "category": "試験",
+   "is_deadline": false,
+   "todos": [
+    {
+     "title": "受験票が届いているか確認する",
+     "days_before": 7,
+     "priority": "high"
+    },
+    {
+     "title": "電卓・筆記用具・身分証を用意する",
+     "days_before": 1,
+     "priority": "high"
+    },
+    {
+     "title": "会場までの経路と所要時間を確認する",
+     "days_before": 1,
+     "priority": "medium"
+    }
+   ]
+  },
+  {
+   "id": "e15",
+   "text": "名古屋へ日帰り出張",
+   "category": "出張",
+   "is_deadline": false,
+   "todos": [
+    {
+     "title": "新幹線を予約する",
+     "days_before": 7,
+     "priority": "high"
+    },
+    {
+     "title": "訪問先の資料と名刺を準備する",
+     "days_before": 1,
+     "priority": "high"
+    }
+   ]
+  },
+  {
+   "id": "e16",
+   "text": "友人とカラオケ 20時",
+   "category": "私用",
+   "is_deadline": false,
+   "todos": []
+  },
+  {
+   "id": "e17",
+   "text": "歯のクリーニング 17時",
+   "category": "通院",
+   "is_deadline": false,
+   "todos": [
+    {
+     "title": "診察券と保険証を用意する",
+     "days_before": 1,
+     "priority": "medium"
+    }
+   ]
+  },
+  {
+   "id": "e18",
+   "text": "引っ越し業者の見積もり立ち会い",
+   "category": "私用",
+   "is_deadline": false,
+   "todos": [
+    {
+     "title": "運ぶ大型家具・家電を書き出す",
+     "days_before": 1,
+     "priority": "medium"
+    }
+   ]
+  },
+  {
+   "id": "e19",
+   "text": "部署のランチ会 12時",
+   "category": "私用",
+   "is_deadline": false,
+   "todos": []
+  }
+ ]
+}

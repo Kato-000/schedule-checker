@@ -1,0 +1,10 @@
+# 改行コードをそろえる（Windows で実行するスクリプトは CRLF のまま取り出す）
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# 画像・アイコンはそのまま
+*.png binary
+*.ico binary
+*.icns binary

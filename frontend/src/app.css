@@ -1,0 +1,117 @@
+/* 方眼の手帳：淡い青灰の方眼紙に藍のインク。優先度は付箋の色で示す。 */
+:root {
+  --paper: #f2f5f8;
+  --paper-raised: #fbfcfd;
+  --grid: #e1e7ee;
+  --ink: #1f2f4a;          /* 藍：本文と主要操作 */
+  --ink-soft: #5b6a82;
+  --ink-faint: #8a96a8;
+  --rule: #cfd8e3;
+  --high: #c0392b;         /* 朱：優先度高・期限切れ */
+  --high-tint: #fbe9e6;
+  --medium: #2f5d9e;       /* 青：優先度中 */
+  --medium-tint: #e6eef9;
+  --low: #8a96a8;          /* 灰：優先度低 */
+  --low-tint: #eef1f5;
+  --ok: #2e7d5b;
+  --focus: #2f5d9e;
+
+  --font: "BIZ UDPGothic", "BIZ UDPゴシック", "Yu Gothic UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  --font-num: "BIZ UDGothic", "BIZ UDゴシック", "Yu Gothic UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+
+  --step--1: 12px;
+  --step-0: 14px;
+  --step-1: 16px;
+  --step-2: 20px;
+  --step-4: 44px;
+
+  --radius-s: 4px;
+  --radius-m: 8px;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: var(--step-0);
+  line-height: 1.6;
+}
+
+#app { height: 100%; }
+
+/* 方眼。ウィジェットと承認画面の地に使う */
+.grid-paper {
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 16px 16px;
+  background-position: -1px -1px;
+}
+
+h1, h2, h3 { margin: 0; font-weight: 700; line-height: 1.35; }
+
+.num { font-family: var(--font-num); font-variant-numeric: tabular-nums; }
+
+button, input, select, textarea { font: inherit; color: inherit; }
+
+button {
+  border: 1px solid var(--rule);
+  background: var(--paper-raised);
+  border-radius: var(--radius-s);
+  padding: 4px 10px;
+  cursor: pointer;
+}
+button:hover { border-color: var(--ink-soft); }
+button:disabled { opacity: .5; cursor: default; }
+button.primary { background: var(--ink); border-color: var(--ink); color: #fff; }
+button.primary:hover { background: #2b3f63; }
+button.danger { color: var(--high); }
+button.plain { border-color: transparent; background: transparent; padding: 2px 6px; }
+button.plain:hover { border-color: var(--rule); }
+
+input, select, textarea {
+  border: 1px solid var(--rule);
+  background: #fff;
+  border-radius: var(--radius-s);
+  padding: 4px 8px;
+  min-width: 0;
+}
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--focus); outline-offset: -1px; border-color: transparent; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+.muted { color: var(--ink-soft); }
+.faint { color: var(--ink-faint); }
+.error-text { color: var(--high); }
+
+/* 優先度の付箋：左端の帯で示す */
+.tab-high { border-left: 4px solid var(--high); }
+.tab-medium { border-left: 4px solid var(--medium); }
+.tab-low { border-left: 4px solid var(--low); }
+
+.pill {
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 10px;
+  font-size: var(--step--1);
+  line-height: 18px;
+  background: var(--low-tint);
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+.pill.high { background: var(--high-tint); color: var(--high); }
+.pill.medium { background: var(--medium-tint); color: var(--medium); }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

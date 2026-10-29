@@ -1,0 +1,34 @@
+# ---- 自分のデータ・秘密情報（絶対に上げない） ----
+# 予定のDB、Googleの認証情報・トークン、LAN用の証明書、APIキーの控え、文字起こしモデルなどはすべてここに入る
+backend/data/
+*.db
+*.sqlite3
+google_client_secret*.json
+client_secret*.json
+token*.json
+secrets.json
+*.pem
+*.key
+.env
+.env.*
+
+# ---- Python ----
+backend/.venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# ---- 画面（Node / Vite / Tauri） ----
+frontend/node_modules/
+frontend/dist/
+frontend/src-tauri/target/
+frontend/src-tauri/gen/
+
+# ---- エディタ・OS ----
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
